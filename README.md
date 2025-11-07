@@ -2,7 +2,7 @@
 
 ---
 
-🧑‍🎓 Student Registration Website
+##🧑‍🎓 Student Registration Website
 
 This is a student registration web application used to register students who take admission in our institute.
 
