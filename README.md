@@ -2,14 +2,14 @@
 
 ---
 
-## 🧑‍🎓 Student Registration Website
+##  Student Registration Website
 
 This is a student registration web application used to register students who take admission in our institute.
 
 
 ---
 
-## 📘 Application Overview
+##  Application Overview
 
 App Name: Student Registration Website
 Purpose: Register students online for institute admission.
@@ -17,16 +17,16 @@ Purpose: Register students online for institute admission.
 
 ---
 
-## ⚙ Project Setup
+##  Project Setup
 
-🖥 Frontend Requirements
+ Frontend Requirements
 
 Node.js installed
 
 npm installed
 
 
-🧩 Backend Requirements
+ Backend Requirements
 
 Java Development Kit (JDK) 17 or higher installed
 
@@ -41,7 +41,7 @@ MariaDB installed
 
 ---
 
-## 🧱 Infrastructure Prerequisites
+##  Infrastructure Prerequisites
 
 Before setting up the application, ensure the following are ready:
 
@@ -57,21 +57,21 @@ Before setting up the application, ensure the following are ready:
 
 ---
 
-## 🪜 Setup Steps
+##  Setup Steps
 
-1️⃣ Switch to Root Directory
+1️ Switch to Root Directory
 ```sh
 sudo -i
 ```
-2️⃣ Update the Instance
+2️ Update the Instance
 ```sh
 apt update
 ```
-3️⃣ Install Docker
+3️ Install Docker
 ```sh
 apt install docker.io -y
 ```
-4️⃣ Install MySQL Client
+4️ Install MySQL Client
 ```sh
 apt install mysql-client -y
 
@@ -79,14 +79,14 @@ apt install mysql-client -y
 
 ---
 
-## 🧬 Clone the Repository
+##  Clone the Repository
 ```sh
 git clone <your-github-repository-link>
 
 ```
 ---
 
-## ⚡ Backend Setup
+##  Backend Setup
 
 Navigate to Backend Directory
 ```sh
@@ -106,7 +106,7 @@ Update database name, username, and password.
 
 ---
 
-🐳 Create Backend Dockerfile
+ Create Backend Dockerfile
 ```sh
 nano Dockerfile
 ```
@@ -125,28 +125,28 @@ CMD ["java", "-jar", "student-registration-backend-0.0.1-SNAPSHOT.jar"]
 
 ---
 
-## 🏗 Build Docker Image
+##  Build Docker Image
 ```sh
 docker build . -t backend:v1
 ```
-## 🚀 Run Docker Container
+##  Run Docker Container
 ```sh
 docker run -d -p 8080:8080 backend:v1
 ```
-## 🔍 Verify Running Containers
+##  Verify Running Containers
 ```sh
 docker ps
 
 ```
 ---
 
-## 🎨 Frontend Setup
+##  Frontend Setup
 
 Navigate to Frontend Directory
 ```sh
 cd <GitHub-repository-name>/frontend
 ```
-## 🐳 Create Frontend Dockerfile
+##  Create Frontend Dockerfile
 ```sh
 nano Dockerfile
 ```
@@ -166,22 +166,22 @@ CMD ["httpd", "-D", "FOREGROUND"]
 
 ---
 
-## 🏗 Build Docker Image
+##  Build Docker Image
 ```sh
 docker build . -t frontend:v1
 ```
-## 🚀 Run Docker Container
+##  Run Docker Container
 ```sh
 docker run -d -p 80:80 frontend:v1
 ```
-## 🔍 Verify Running Containers
+##  Verify Running Containers
 ```sh
 docker ps
 
 ```
 ---
 
-🧾 Summary
+ Summary
 
 Component	Port	Image Name	Command
 
