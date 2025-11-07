@@ -185,8 +185,9 @@ docker ps
 
 Component	Port	Image Name	Command
 
-Backend	8080	backend:v1	docker run -d -p 8080:8080 backend:v1
-Frontend	80	frontend:v1	docker run -d -p 80:80 frontend:v1
+Backend	8080	backend:v1	docker run -d -p 8080:8080 backend:v1 
+
+Frontend	80	frontend:v1	docker run -d -p 80:80 frontend:v1 
 
 
 
