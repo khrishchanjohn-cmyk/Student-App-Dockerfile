@@ -89,13 +89,13 @@ git clone <your-github-repository-link>
 ## ⚡ Backend Setup
 
 Navigate to Backend Directory
-
+```sh
 cd <GitHub-repository-name>/backend
-
+```
 Configure application.properties
-
+```sh
 nano application.properties
-
+```
 Changes to make:
 
 Replace localhost with your RDS endpoint.
