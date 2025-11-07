@@ -60,21 +60,22 @@ Before setting up the application, ensure the following are ready:
 🪜 Setup Steps
 
 1️⃣ Switch to Root Directory
-
+```sh
 sudo -i
-
+```
 2️⃣ Update the Instance
-
+```sh
 apt update
-
+```
 3️⃣ Install Docker
-
+```sh
 apt install docker.io -y
-
+```
 4️⃣ Install MySQL Client
-
+```sh
 apt install mysql-client -y
 
+```
 
 ---
 
