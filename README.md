@@ -9,7 +9,7 @@ This is a student registration web application used to register students who tak
 
 ---
 
-📘 Application Overview
+## 📘 Application Overview
 
 App Name: Student Registration Website
 Purpose: Register students online for institute admission.
@@ -17,7 +17,7 @@ Purpose: Register students online for institute admission.
 
 ---
 
-⚙ Project Setup
+## ⚙ Project Setup
 
 🖥 Frontend Requirements
 
@@ -41,7 +41,7 @@ MariaDB installed
 
 ---
 
-🧱 Infrastructure Prerequisites
+## 🧱 Infrastructure Prerequisites
 
 Before setting up the application, ensure the following are ready:
 
@@ -57,7 +57,7 @@ Before setting up the application, ensure the following are ready:
 
 ---
 
-🪜 Setup Steps
+## 🪜 Setup Steps
 
 1️⃣ Switch to Root Directory
 ```sh
@@ -79,14 +79,14 @@ apt install mysql-client -y
 
 ---
 
-🧬 Clone the Repository
-
+## 🧬 Clone the Repository
+```sh
 git clone <your-github-repository-link>
 
-
+```
 ---
 
-⚡ Backend Setup
+## ⚡ Backend Setup
 
 Navigate to Backend Directory
 
@@ -107,11 +107,11 @@ Update database name, username, and password.
 ---
 
 🐳 Create Backend Dockerfile
-
+```sh
 nano Dockerfile
-
+```
 Paste the following content:
-
+```sh
 FROM maven:3.8.3-openjdk-17
 COPY . /OPT
 WORKDIR /OPT
@@ -121,37 +121,37 @@ RUN mvn clean package
 WORKDIR /OPT/target
 EXPOSE 8080
 CMD ["java", "-jar", "student-registration-backend-0.0.1-SNAPSHOT.jar"]
-
+```
 
 ---
 
-🏗 Build Docker Image
-
+## 🏗 Build Docker Image
+```sh
 docker build . -t backend:v1
-
-🚀 Run Docker Container
-
+```
+## 🚀 Run Docker Container
+```sh
 docker run -d -p 8080:8080 backend:v1
-
-🔍 Verify Running Containers
-
+```
+## 🔍 Verify Running Containers
+```sh
 docker ps
 
-
+```
 ---
 
-🎨 Frontend Setup
+## 🎨 Frontend Setup
 
 Navigate to Frontend Directory
-
+```sh
 cd <GitHub-repository-name>/frontend
-
-🐳 Create Frontend Dockerfile
-
+```
+## 🐳 Create Frontend Dockerfile
+```sh
 nano Dockerfile
-
+```
 Paste the following content:
-
+```sh
 FROM node:25-alpine3.21
 COPY . /OPT
 WORKDIR /OPT
@@ -162,23 +162,23 @@ RUN npm run build
 RUN cp -rf dist/* /var/www/localhost/htdocs/
 EXPOSE 80
 CMD ["httpd", "-D", "FOREGROUND"]
-
+```
 
 ---
 
-🏗 Build Docker Image
-
+## 🏗 Build Docker Image
+```sh
 docker build . -t frontend:v1
-
-🚀 Run Docker Container
-
+```
+## 🚀 Run Docker Container
+```sh
 docker run -d -p 80:80 frontend:v1
-
-🔍 Verify Running Containers
-
+```
+## 🔍 Verify Running Containers
+```sh
 docker ps
 
-
+```
 ---
 
 🧾 Summary
@@ -197,7 +197,9 @@ Frontend	80	frontend:v1	docker run -d -p 80:80 frontend:v1
 Ensure the RDS endpoint is properly configured in the backend application.properties.
 
 Access the website at your EC2 public IP (port 80).
-
+```sh
+http://<EC2-PUBLIC-IP>
+```
 The backend API runs on port 8080.
 
 
