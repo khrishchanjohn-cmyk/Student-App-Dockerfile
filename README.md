@@ -19,21 +19,21 @@ Purpose: Register students online for institute admission.
 
 ##  Project Setup
 
- Frontend Requirements
+ .Frontend Requirements
 
 Node.js installed
 
 npm installed
 
 
- Backend Requirements
+ .Backend Requirements
 
 Java Development Kit (JDK) 17 or higher installed
 
 Maven installed
 
 
-🗄 Database Requirements
+.Database Requirements
 
 MariaDB installed
 
@@ -88,15 +88,15 @@ git clone <your-github-repository-link>
 
 ##  Backend Setup
 
-Navigate to Backend Directory
+.Navigate to Backend Directory
 ```sh
 cd <GitHub-repository-name>/backend
 ```
-Configure application.properties
+.Configure application.properties
 ```sh
 nano application.properties
 ```
-Changes to make:
+.Changes to make:
 
 Replace localhost with your RDS endpoint.
 
@@ -106,11 +106,11 @@ Update database name, username, and password.
 
 ---
 
- Create Backend Dockerfile
+ .Create Backend Dockerfile
 ```sh
 nano Dockerfile
 ```
-Paste the following content:
+.Paste the following content:
 ```sh
 FROM maven:3.8.3-openjdk-17
 COPY . /OPT
@@ -142,7 +142,7 @@ docker ps
 
 ##  Frontend Setup
 
-Navigate to Frontend Directory
+.Navigate to Frontend Directory
 ```sh
 cd <GitHub-repository-name>/frontend
 ```
@@ -150,7 +150,7 @@ cd <GitHub-repository-name>/frontend
 ```sh
 nano Dockerfile
 ```
-Paste the following content:
+.Paste the following content:
 ```sh
 FROM node:25-alpine3.21
 COPY . /OPT
@@ -181,9 +181,9 @@ docker ps
 ```
 ---
 
- Summary
+ .Summary
 
-Component	Port	Image Name	Command
+.Component	Port	Image Name	Command
 
 Backend	8080	backend:v1	docker run -d -p 8080:8080 backend:v1 
 
@@ -195,13 +195,13 @@ Frontend	80	frontend:v1	docker run -d -p 80:80 frontend:v1
 
 ✅ Final Notes
 
-Ensure the RDS endpoint is properly configured in the backend application.properties.
+.Ensure the RDS endpoint is properly configured in the backend application.properties.
 
-Access the website at your EC2 public IP (port 80).
+.Access the website at your EC2 public IP (port 80).
 ```sh
 http://<EC2-PUBLIC-IP>
 ```
-The backend API runs on port 8080.
+.The backend API runs on port 8080.
 
 
 
